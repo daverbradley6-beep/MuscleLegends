@@ -85,6 +85,7 @@ local function showMenu(target,label)
  local current=panelTarget
  while current and current~=pg do
   if current:IsA('GuiObject') then current.Visible=true end
+  if current:IsA('ScreenGui') then current.Enabled=true end
   current=current.Parent
  end
  if panelTarget:IsA('ScreenGui') then panelTarget.Enabled=true end
